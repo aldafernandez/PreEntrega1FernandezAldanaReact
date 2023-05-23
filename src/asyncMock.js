@@ -7,7 +7,7 @@ const products = [
         id: "1",
         nombre: "Cama flotante",
         precio: 10000,
-        categoria:"accesorios",
+        category:"accesorios",
         img: <img src={Image} alt="cama flotante"/>,
         stock: 25
     },
@@ -23,11 +23,20 @@ const products = [
         id: "3",
         nombre: "Combo para perro",
         precio: 1000,
-        categoria:"accesorios",
+        category:"accesorios",
         img: <img src={Image3} alt="cama redonda"/>,
         stock: 25
     }
 ]
+
+
+export const getProductsByCategory = () => {
+    return new Promise ((resolve) => {
+        setTimeout (()=> {
+            resolve(category)
+        },500)
+    })
+}
 
 export const getProducts = () => {
     return new Promise ((resolve) => {
