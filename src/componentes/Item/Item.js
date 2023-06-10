@@ -1,4 +1,6 @@
-export const Item = ({id, nombre, precio, categoria, img, stock}) => {
+import { Link } from "react-router-dom"
+
+export const Item = ({id, nombre, precio, category, img, stock}) => {
 
     return (
         <article className="CardItem">
@@ -19,7 +21,8 @@ export const Item = ({id, nombre, precio, categoria, img, stock}) => {
                 </p>
             </section>
             <footer className="ItemFooter">
-                <link to={'item/${id}'} className="'Option">Ver detalle</link>
+                <Link to={`item/${id}`}className="'Option">Ver detalle</Link>
+            
             </footer>
         </article>
     )
